@@ -32,7 +32,7 @@ body {
   position: relative;
   text-align: center;
   color: #000;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 1em 0 3em;
   font-weight: 500;
 }
@@ -43,7 +43,7 @@ body {
   transform: translate(-50%, -50%);
   content: "";
   background-color: #40ba0f;
-  width: 80px;
+  width: 60px;
   height: 5px;
   border-radius: 10px;
 }
@@ -157,8 +157,8 @@ body {
   grid-row: 1/2;
   font-size: 1em;
 }
-.header .nav-desktop__items a:hover {
-  color: #eaff0e;
+.header .nav-desktop__items a {
+  color: #40ba0f;
 }
 .header .nav-desktop__items a:visited {
   color: #40ba0f;
@@ -237,9 +237,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.137254902);
-  color: #000;
+  color: #fff;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 0.7em;
   border: 1px solid #fff;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -280,12 +280,6 @@ body {
   left: 0;
 }
 
-.about-us {
-  background-color: #f9f9f9;
-}
-.about-us .section-title {
-  font-size: 1.1em;
-}
 .about-us__container {
   position: relative;
   display: flex;
@@ -293,21 +287,36 @@ body {
   justify-content: center;
   text-align: left;
   z-index: 10;
-  background: none;
+  border-radius: 1rem;
+  max-width: 600px;
+  margin: auto;
   margin-bottom: 2em;
 }
 .about-us__text {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  margin-top: -1em;
   color: #000;
+  border: 1px solid #40ba0f;
 }
 .about-us__text h3 {
-  font-size: 1em;
+  font-size: 1.2rem;
   margin: 0.5em 0;
 }
 .about-us__text p {
-  font-size: 0.5em;
+  margin-top: 1.5rem;
+  font-size: 0.6em;
+}
+.about-us__text p i {
+  margin-right: 10px;
 }
 .about-us__img {
   width: 100%;
+  border-radius: 1rem;
 }
 .about-us .background-icon {
   display: none;
@@ -317,16 +326,16 @@ body {
   z-index: 0;
 }
 .about-us .background-icon--sun {
-  left: 10%;
+  right: 10%;
   top: 13%;
   animation: sun-animation 120s linear infinite;
 }
 .about-us .background-icon--thunder {
-  bottom: 2%;
-  right: 3%;
+  bottom: 0%;
+  left: 10%;
   transform: rotate(10deg);
   width: 400px;
-  animation: electricPulse 7s ease-in-out infinite;
+  animation: electricPulse 5s ease-in-out infinite;
 }
 
 @keyframes sun-animation {
@@ -342,15 +351,57 @@ body {
     transform: scale(1) rotate(10deg);
   }
   50% {
-    transform: scale(1.1) rotate(10deg);
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+.offer {
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.offer__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/wind-energy-big.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -10;
+}
+.offer__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5254901961);
+}
+.offer .section-title {
+  color: #fff;
+}
+
+@media (min-width: 576px) {
+  .header__hero-button {
+    font-size: 1.2em;
   }
 }
 @media (min-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }
   .header__hero-img {
     background-image: url("../img/hero-big.jpg");
   }
   .header__hero-text {
     font-size: 1.5em;
+  }
+  .header__hero-button {
+    font-size: 1em;
   }
 }
 @media (min-width: 992px) {
@@ -381,9 +432,59 @@ body {
     font-weight: 700;
     font-size: 2.5em;
   }
+  .header__hero-button {
+    font-size: 1.3em;
+  }
+  .about-us__container {
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
+  }
+  .about-us__container--right img {
+    order: 2;
+  }
+  .about-us__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    width: 40%;
+    font-size: 1.3em;
+  }
+  .about-us__text h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .about-us__text p {
+    margin: 0;
+    font-size: 0.6em;
+  }
+  .about-us__text p i {
+    margin-right: 10px;
+  }
+  .about-us__img {
+    width: 40%;
+    height: 260px;
+    border-radius: 0;
+  }
+  .about-us .background-icon {
+    display: block;
+  }
 }
 @media (min-width: 1200px) {
   .header .nav-desktop__items {
     grid-column: 3/6;
+  }
+  .about-us__text h3 {
+    font-size: 2rem;
+  }
+  .about-us__text p {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
