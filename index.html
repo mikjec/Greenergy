@@ -10,6 +10,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet">
         <script src="https://kit.fontawesome.com/8cecda4e3d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
         <link rel="stylesheet" href="./css/burger-btn.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
@@ -39,10 +42,10 @@
                         <a href="#" class="nav-desktop__logo"><span class="white-text">Gre</span><span
                                 class="green-text">energy</span></a>
                         <div class="nav-desktop__items">
-                            <a href="#" class="nav-desktop__item">O nas</a>
-                            <a href="#" class="nav-desktop__item">Oferta</a>
-                            <a href="#" class="nav-desktop__item">Opinie</a>
-                            <a href="#" class="nav-desktop__item">Kontakt</a>
+                            <a href="#aboutUS" class="nav-desktop__item">O nas</a>
+                            <a href="#offer" class="nav-desktop__item">Oferta</a>
+                            <a href="#opinions" class="nav-desktop__item">Opinie</a>
+                            <a href="#contact" class="nav-desktop__item">Kontakt</a>
                         </div>
                     </div>
                 </div>
@@ -100,110 +103,113 @@
 
             <section class="offer section" id="offer">
                 <h2 class="section-title">Nasza oferta</h2>
-                <div class="offer__items">
+                <div class="offer__cards">
 
-                    <div class="offer__item">
-                        <h3 class="offer__item-title">Instalacje fotowoltaiczne ☀️</h3>
-                        <p class="offer__item-description">
-                            Projektujemy i montujemy panele fotowoltaiczne dla domów, firm i gospodarstw rolnych.
-                            Dobieramy moc do Twoich potrzeb, dbamy o każdy szczegół.
-                        </p>
+                    <div class="offer__card">
+                        <div class="offer__card-img offer__card-img--first">
+                            <h3 class="offer__card-img-title">Instalacje fotowoltaiczne</h3>
+                            <p class="offer__card-img-info"><i class="fa-solid fa-angles-right"></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="offer__card-text">
+                            <h3 class="offer__card-text-title">Instalacje fotowoltaiczne</h3>
+                            <p class="offer__card-text-info">
+                                Projektujemy i montujemy panele fotowoltaiczne dla domów, firm i gospodarstw rolnych.
+                                Dobieramy moc do Twoich potrzeb, dbamy o każdy szczegół.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="offer__item">
-                        <h3 class="offer__item-title">Pompy ciepła 🔥❄️</h3>
-                        <p class="offer__item-description">
-                            Nowoczesne, energooszczędne źródło ogrzewania. Z nami zyskasz komfort i niższe rachunki –
-                            przez cały rok.
-                        </p>
+                    <div class="offer__card">
+                        <div class="offer__card-img offer__card-img--second">
+                            <h3 class="offer__card-img-title">Pompy ciepła </h3>
+                            <p class="offer__card-img-info"><i class="fa-solid fa-angles-right"></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="offer__card-text">
+                            <h3 class="offer__card-text-title">Pompy ciepła</h3>
+                            <p class="offer__card-text-info">
+                                Nowoczesne, energooszczędne źródło ogrzewania. Z nami zyskasz komfort i niższe rachunki
+                                przez cały rok.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="offer__item">
-                        <h3 class="offer__item-title">Magazyny energii ⚡</h3>
-                        <p class="offer__item-description">
-                            Zmagazynuj energię i korzystaj z niej wtedy, kiedy najbardziej jej potrzebujesz.
-                            Oferujemy wydajne i nowoczesne rozwiązania.
-                        </p>
+                    <div class="offer__card">
+                        <div class="offer__card-img offer__card-img--third">
+                            <h3 class="offer__card-img-title">Magazyny energii </h3>
+                            <p class="offer__card-img-info"><i class="fa-solid fa-angles-right"></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="offer__card-text">
+                            <h3 class="offer__card-text-title">Magazyny energii</h3>
+                            <p class="offer__card-text-info">
+                                Zmagazynuj energię i korzystaj z niej wtedy, kiedy najbardziej jej potrzebujesz.
+                                Oferujemy wydajne i nowoczesne rozwiązania.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="offer__item">
-                        <h3 class="offer__item-title">Doradztwo i audyty 📊</h3>
-                        <p class="offer__item-description">
-                            Sprawdzimy, ile możesz zyskać przechodząc na OZE. Doradzimy najlepsze rozwiązania i pomożemy
-                            w pozyskaniu dofinansowania.
-                        </p>
+                    <div class="offer__card">
+                        <div class="offer__card-img offer__card-img--fourth">
+                            <h3 class="offer__card-img-title">Doradztwo i audyty </h3>
+                            <p class="offer__card-img-info"><i class="fa-solid fa-angles-right"></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="offer__card-text">
+                            <h3 class="offer__card-text-title">Doradztwo i audyty</h3>
+                            <p class="offer__card-text-info">
+                                Sprawdzimy, ile możesz zyskać przechodząc na OZE. Doradzimy najlepsze rozwiązania i
+                                pomożemy w pozyskaniu dofinansowania.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="offer__item">
-                        <h3 class="offer__item-title">Dotacje i formalności 💰</h3>
-                        <p class="offer__item-description">
-                            Zajmiemy się formalnościami – od wniosków po rozliczenia. Ty korzystasz z dofinansowania, my
-                            robimy resztę.
-                        </p>
+                    <div class="offer__card">
+                        <div class="offer__card-img offer__card-img--fifth">
+                            <h3 class="offer__card-img-title">Dotacje i formalności</h3>
+                            <p class="offer__card-img-info"><i class="fa-solid fa-angles-right"></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="offer__card-text">
+                            <h3 class="offer__card-text-title">Dotacje i formalności</h3>
+                            <p class="offer__card-text-info">
+                                Zajmiemy się formalnościami od wniosków po rozliczenia. Ty korzystasz z
+                                dofinansowania, my robimy resztę.
+                            </p>
+                        </div>
                     </div>
+
 
                 </div>
                 <div class="offer__cta">
                     <p class="offer__cta-text">Nie wiesz, od czego zacząć?</p>
-                    <a href="#kontakt" class="offer__cta-button">Skontaktuj się z nami</a>
+                    <a href="#kontakt" class="offer__cta-button">Skontaktuj się z nami <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="offer__img"></div>
                 <div class="offer__shadow"></div>
             </section>
 
+            <section id="reviews" class="reviews section">
+                <h2 class="section-title reviews__heading">Opinie naszych klientów</h2>
+                <div id="reviews-slider" class="reviews__slider wrapper">
+                </div>
+            </section>
+
+            <section id="contact" class="contact section">
+                <h2 class="section-title">Skontaktuj się z nami!</h2>
+            </section>
+
         </main>
 
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <footer class="footer">
+            <p class="footer__text">&copy; Gre<span class="green-text">energy</span> <span class="footer__year"></span></p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
         <script src="./js/script.js"></script>
     </body>
