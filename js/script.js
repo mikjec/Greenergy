@@ -12,8 +12,8 @@ const heroBtnAnimation = () => {
 		heroBtn.classList.remove('button-animation')
 	}, 1000) // Usunięcie klasy po 1 sekundzie
 }
-const handleDate = () =>{
-	footerYear.textContent=new Date().getFullYear()
+const handleDate = () => {
+	footerYear.textContent = new Date().getFullYear()
 }
 
 async function initReviewsSlider() {
