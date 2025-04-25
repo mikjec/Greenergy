@@ -71,8 +71,18 @@ async function initReviewsSlider() {
 menuItems.forEach(item => {
 	item.addEventListener('click', () => {
 		navMenu.classList.remove('nav-mobile__items--active')
+		burgerBtn.classList.remove('is-active')
 	})
 })
+
+const menuItemsAnimation = () => {
+	let delay = 0
+	menuItems.forEach(item => {
+		item.classList.toggle('nav-items-animation')
+		item.style.animationDelay = `${delay}s`
+		delay += 0.1
+	})
+}
 
 contactForm.addEventListener('submit', e => {
 	e.preventDefault()
@@ -97,4 +107,5 @@ document.addEventListener('DOMContentLoaded', () => {
 burgerBtn.addEventListener('click', () => {
 	burgerBtn.classList.toggle('is-active')
 	navMenu.classList.toggle('nav-mobile__items--active')
+	menuItemsAnimation()
 })

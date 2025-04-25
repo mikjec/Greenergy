@@ -72,7 +72,7 @@ body {
   background-color: #f9f9f9;
   z-index: 80;
   overflow: hidden;
-  transition: transform 0.5s;
+  transition: transform 0.8s;
 }
 .header .nav-mobile__items a {
   text-decoration: none;
@@ -281,6 +281,18 @@ body {
   left: 0;
 }
 
+.nav-items-animation {
+  animation: navItemsAnimation 0.7s both;
+}
+
+@keyframes navItemsAnimation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
 .about-us__container {
   position: relative;
   display: flex;
@@ -367,7 +379,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/grass.jpg");
+  background-image: url("../img/grass-sm.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -722,6 +734,9 @@ body {
   }
   .header__hero-button {
     font-size: 1em;
+  }
+  .offer__img {
+    background-image: url("../img/grass-big.jpg");
   }
   .offer__card-img-title {
     font-size: 1.2em;
