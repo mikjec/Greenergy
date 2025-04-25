@@ -16,6 +16,7 @@ body {
 	font-size: 1.6rem;
 	color: #fff;
 	overflow: auto;
+	overflow-x: hidden;
 }
 
 //components
@@ -106,7 +107,7 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		width: 80%;
-		padding: .5em 1em;
+		padding: 0.5em 1em;
 		margin: 0 auto;
 		background-color: $secondary-color;
 		text-align: center;
@@ -579,11 +580,6 @@ body {
 	padding: 4rem 1rem;
 	background: $secondary-color;
 	color: #000;
-	&__heading {
-		text-align: center;
-		font-size: 2rem;
-		margin-bottom: 2.5rem;
-	}
 
 	&__slider {
 		padding: 2em;
@@ -638,12 +634,163 @@ body {
 
 .contact {
 	background-color: #eee;
+	color: #3c3c3c;
+	font-size: 2rem;
+	&-form {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		
+		max-width: 600px;
+		&__group {
+			position: relative;
+			margin: 10px 0;
+
+			.text-input {
+				padding: 15px 10px;
+				border-radius: 5px;
+				border: 2px solid #b7b7b7;
+				background-color: #eee;
+				width: 100%;
+				font-size: 1.1rem;
+				transition: border 0.2s;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+				&:focus {
+					outline: none;
+					border: 2px solid $main-color;
+				}
+			}
+
+			.text-label {
+				position: absolute;
+				top: -25%;
+				left: 5%;
+				font-size: 1.2rem;
+				font-weight: 500;
+				background-color: #eee;
+				padding: 0 10px;
+				transition: transform 0.3s;
+			}
+
+			.input-label {
+				font-size: 1.3rem;
+			}
+
+			.radio-group {
+				padding: 0.5em;
+				font-size: 1.3rem;
+				label {
+					margin: 1em;
+				}
+				input {
+					box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+					&:checked {
+						background-color: $main-color;
+						border-color: $main-color;
+
+						&::before {
+							background-color: $main-color;
+						}
+					}
+				}
+			}
+
+			.select-input {
+				&,
+				&::picker(select) {
+					appearance: base-select;
+					border-radius: 10px;
+					padding: 0.5em 1em;
+				}
+				background-color: #fff;
+				padding: 0.5em 1em;
+				border-radius: 10px;
+				font-size: 1.1rem;
+				width: 300px;
+				transition: 0.3s;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+				border: 2px solid #b7b7b7;
+				&:focus {
+					outline: none;
+					border: 2px solid $main-color;
+				}
+				option {
+					border-radius: 10px;
+					padding: 0 1em;
+
+					&:focus {
+						border: 1px solid $main-color;
+					}
+				}
+			}
+
+			.input-message {
+				padding: 0.5em 1em;
+				width: 100%;
+				max-width: 100%;
+				min-width: 100%;
+				border: 2px solid #b7b7b7;
+				border-radius: 10px;
+				max-height: 100px;
+				min-height: 100px;
+				transition: 0.3s border;
+				font-size: 1.1rem;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+				&:focus {
+					outline: none;
+					border: 2px solid $main-color;
+				}
+			}
+
+			.input-checkbox {
+				font-size: 1rem;
+				input {
+					font-size: 3rem;
+				}
+			}
+		}
+
+		&__btns {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			
+
+			width: 100%;
+
+			.form-button {
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+				border: none;
+				border-radius: 10px;
+				background-color: $main-color;
+				color: #fff;
+				margin: 2em 1em;
+				width: 100px;
+				font-weight: 400;
+				padding: 1em 1.5em;
+			}
+
+			.clear-btn{
+				color: #3c3c3c;
+				background-color: #fff;
+			}
+		}
+	}
+
+	.section-title{
+		font-size: 1em;
+	}
 }
 
 //footer
 
 .footer {
 	background-color: #2e2e2e;
+	font-size: 1.1rem;
 	padding: 4em;
 	text-align: center;
 }
@@ -704,6 +851,12 @@ body {
 			&-button {
 				font-size: 1.1em;
 			}
+		}
+	}
+
+	.contact{
+		.section-title{
+			font-size: 1.3em;
 		}
 	}
 }

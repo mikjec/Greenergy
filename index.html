@@ -31,7 +31,7 @@
                     <div class="nav-mobile__items">
                         <a href="#aboutUs" class="nav__item">O nas</a>
                         <a href="#offer" class="nav__item">Oferta</a>
-                        <a href="#opinions" class="nav__item">Opinie</a>
+                        <a href="#reviews" class="nav__item">Opinie</a>
                         <a href="#contact" class="nav__item">Kontakt</a>
                     </div>
                 </div>
@@ -42,9 +42,9 @@
                         <a href="#" class="nav-desktop__logo"><span class="white-text">Gre</span><span
                                 class="green-text">energy</span></a>
                         <div class="nav-desktop__items">
-                            <a href="#aboutUS" class="nav-desktop__item">O nas</a>
+                            <a href="#aboutUs" class="nav-desktop__item">O nas</a>
                             <a href="#offer" class="nav-desktop__item">Oferta</a>
-                            <a href="#opinions" class="nav-desktop__item">Opinie</a>
+                            <a href="#reviews" class="nav-desktop__item">Opinie</a>
                             <a href="#contact" class="nav-desktop__item">Kontakt</a>
                         </div>
                     </div>
@@ -184,7 +184,7 @@
                 </div>
                 <div class="offer__cta">
                     <p class="offer__cta-text">Nie wiesz, od czego zacząć?</p>
-                    <a href="#kontakt" class="offer__cta-button">Skontaktuj się z nami <i
+                    <a href="#contact" class="offer__cta-button">Skontaktuj się z nami <i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="offer__img"></div>
@@ -192,13 +192,91 @@
             </section>
 
             <section id="reviews" class="reviews section">
-                <h2 class="section-title reviews__heading">Opinie naszych klientów</h2>
+                <h2 class="section-title reviews__heading">Opinie klientów</h2>
                 <div id="reviews-slider" class="reviews__slider wrapper">
                 </div>
             </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <section id="contact" class="contact section">
                 <h2 class="section-title">Skontaktuj się z nami!</h2>
+
+                <form id="contactForm" class="contact-form wrapper">
+                    <div class="contact-form__group">
+                        <label class="text-label" for="fullName">Imię i nazwisko</label>
+                        <input type="text" id="fullName" name="fullName" required minlength="3" class="text-input"
+                            placeholder=" ">
+                    </div>
+
+                    <div class="contact-form__group">
+                        <label class="text-label" for="email">Adres e-mail</label>
+                        <input type="email" id="email" name="email" required class="text-input">
+                        <div class="error" id="emailError"></div>
+                    </div>
+
+                    <div class="contact-form__group">
+                        <label class="text-label" for="phone">Numer telefonu</label>
+                        <input type="tel" id="phone" name="phone" pattern="^\+?\d{9,15}$" required class="text-input">
+                    </div>
+
+                    <div class="contact-form__group">
+                        <label class="input-label radio-label">Preferowana forma kontaktu</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="contactMethod" value="email" required> E-mail</label>
+                            <label><input type="radio" name="contactMethod" value="phone"> Telefon</label>
+                        </div>
+                    </div>
+
+                    <div class="contact-form__group">
+                        <label class="input-label select-label" for="interest">Czym jesteś zainteresowany?</label>
+                        <select id="interest" name="interest" required class="select-input">
+                            <option value="">Wybierz opcję</option>
+                            <option value="fotowoltaika">Instalacja fotowoltaiczna</option>
+                            <option value="heat_pump">Pompa ciepła</option>
+                            <option value="energy_storage">Magazyn energii</option>
+                            <option value="audit">Audyt energetyczny</option>
+                            <option value="dotation">Dotacja i formalności</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-form__group">
+                        <label class="input-label message-label">Dodatkowe informacje</label>
+                        <textarea name="message" rows="5" placeholder="Opisz swój przypadek lub zadaj pytanie..."
+                            class="input-message"></textarea>
+                    </div>
+
+                    <div class="contact-form__group">
+                        <label class="input-label checkbox-label">Zgody:</label>
+                        <div class="checkbox-group">
+                            <label class="input-checkbox"><input type="checkbox" id="rodo" required> Akceptuję politykę
+                                prywatności
+                                (RODO)</label>
+                        </div>
+                        <div class="error" id="rodoError"></div>
+                    </div>
+
+                    <div class="contact-form__btns">
+                        <button type="reset" class="clear-btn form-button">Wyczyść</button>
+                        <button type="submit" class="send-btn form-button">Wyślij</button>
+                    </div>
+                </form>
+
             </section>
 
         </main>

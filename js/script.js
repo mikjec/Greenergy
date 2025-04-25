@@ -4,6 +4,7 @@ const navMenu = document.querySelector('.nav-mobile__items')
 const menuItems = document.querySelectorAll('.nav__item')
 const footerYear = document.querySelector('.footer__year')
 const slider = $('#reviews-slider')
+const contactForm = document.querySelector('#contactForm')
 
 const heroBtnAnimation = () => {
 	heroBtn.classList.add('button-animation')
@@ -14,6 +15,22 @@ const heroBtnAnimation = () => {
 }
 const handleDate = () => {
 	footerYear.textContent = new Date().getFullYear()
+}
+
+const setForm = () => {
+	const saved = localStorage.getItem('kontaktFormularz')
+	if (!saved) return
+
+	const data = JSON.parse(saved)
+
+	Object.keys(data).forEach(key => {
+		const field = contactForm.elements[key]
+		if (field.type === 'checkbox') {
+			field.checked = data[key]
+		} else {
+			field.value = data[key]
+		}
+	})
 }
 
 async function initReviewsSlider() {
@@ -57,7 +74,21 @@ menuItems.forEach(item => {
 	})
 })
 
+contactForm.addEventListener('submit', e => {
+	e.preventDefault()
+
+	const formData = new FormData(e.target)
+	const data = {}
+
+	formData.forEach((value, key) => {
+		data[key] = value
+	})
+	localStorage.setItem('kontaktFormularz', JSON.stringify(data))
+	alert('Formularz został zapisany!')
+})
+
 document.addEventListener('DOMContentLoaded', () => {
+	setForm()
 	handleDate()
 	initReviewsSlider()
 	setInterval(heroBtnAnimation, 7000)
