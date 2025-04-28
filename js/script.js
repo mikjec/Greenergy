@@ -97,6 +97,11 @@ contactForm.addEventListener('submit', e => {
 	alert('Formularz został zapisany!')
 })
 
+contactForm.addEventListener('reset', () => {
+	localStorage.removeItem('kontaktFormularz')
+	alert('Formularz zostal usuniety')
+})
+
 document.addEventListener('DOMContentLoaded', () => {
 	setForm()
 	handleDate()

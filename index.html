@@ -197,7 +197,8 @@
 
             <section id="reviews" class="reviews section">
                 <h2 class="section-title reviews__heading">Opinie klientów</h2>
-                <div id="reviews-slider" class="reviews__slider wrapper" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <div id="reviews-slider" class="reviews__slider wrapper" data-aos="fade-up" data-aos-duration="500"
+                    data-aos-delay="300">
                 </div>
             </section>
 
@@ -239,7 +240,7 @@
                         <input type="tel" id="phone" name="phone" pattern="^\+?\d{9,15}$" required class="text-input">
                     </div>
 
-                    <div class="contact-form__group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="900">
+                    <div class="contact-form__group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
                         <label class="input-label radio-label">Preferowana forma kontaktu</label>
                         <div class="radio-group">
                             <label><input type="radio" name="contactMethod" value="email" required> E-mail</label>
@@ -247,7 +248,7 @@
                         </div>
                     </div>
 
-                    <div class="contact-form__group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1100">
+                    <div class="contact-form__group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="900">
                         <label class="input-label select-label" for="interest">Czym jesteś zainteresowany?</label>
                         <select id="interest" name="interest" required class="select-input">
                             <option value="">Wybierz opcję</option>
@@ -259,13 +260,13 @@
                         </select>
                     </div>
 
-                    <div class="contact-form__group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1300">
+                    <div class="contact-form__group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1000">
                         <label class="input-label message-label">Dodatkowe informacje</label>
                         <textarea name="message" rows="5" placeholder="Opisz swój przypadek lub zadaj pytanie..."
                             class="input-message"></textarea>
                     </div>
 
-                    <div class="contact-form__group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1500">
+                    <div class="contact-form__group" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1100">
                         <label class="input-label checkbox-label">Zgody:</label>
                         <div class="checkbox-group">
                             <label class="input-checkbox"><input type="checkbox" id="rodo" required> Akceptuję politykę
@@ -275,7 +276,7 @@
                         <div class="error" id="rodoError"></div>
                     </div>
 
-                    <div class="contact-form__btns" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1700">
+                    <div class="contact-form__btns" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">
                         <button type="reset" class="clear-btn form-button">Wyczyść</button>
                         <button type="submit" class="send-btn form-button">Wyślij</button>
                     </div>
@@ -294,7 +295,10 @@
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            AOS.init();
+            AOS.init({
+                once: true
+            });
+
         </script>
         <script src="./js/script.js"></script>
     </body>
